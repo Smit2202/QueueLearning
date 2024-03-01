@@ -8,49 +8,46 @@ namespace QueueLearning
     {
         public static void Main(string[] args)
         {
-            // create a queue
-            Queue<string> fruits = new Queue<string>();
-            bool task = false;
+            // Create a Queue
+            Queue<string> fruitsQueue = new Queue<string>();
 
-            while (!task)
+            // Loop for take inpute from user.
+            bool quit = false;
+            while (!quit)
             {
-                Console.WriteLine($"{Environment.NewLine}Add = add, {Environment.NewLine}Displaying the Queue = show,{Environment.NewLine}Check = check, {Environment.NewLine}Quit = quit");
-                Console.WriteLine();
+                // Taking inpute from user for which task Perform.
+                string UserInputModule = UserInput.Input();
 
-                Console.Write("Enter What You Want to do? : ");
-                string UserInputModule = Console.ReadLine();
                 switch (UserInputModule)
                 {
-                    case "add":
-                        // adds
-                        Console.Write("Enter the string: ");
-                        string userInputString = Console.ReadLine();
-                        QueueAdd.Add(userInputString, fruits);
+                    // Add Element in Queue.
+                    case "add":                        
+                        QueueAdd.Add(fruitsQueue);
                         break;
-                    case "show":
-                        // print elements of the queue 
-                        foreach (string item in fruits)
-                        {
-                            Console.WriteLine(item);
-                        }
-                        break;                    
+                    // Show Queue.
+                    case "show":                        
+                        QueueShow.Show(fruitsQueue);
+                        break;
+                    // Check the Element is in Queue or not .
                     case "check":
-                        Console.WriteLine("Enter String");
-                        string nstring = Console.ReadLine(); 
-                        Console.WriteLine(fruits.Contains(nstring));
+                        QueueCheck.Check(fruitsQueue);
                         break;
+                    case "remove":
+                        RemoveElement.Remove(fruitsQueue);
+                        break;
+                    case "return":
+                        ReturnElement.ReturnElementFromQueue(fruitsQueue);
+                        break;
+                    // Quit the Application.
                     case "quit":
-                        task = true;
+                        quit = true;
                         break;
+                    // Invalid Inpute.
                     default:
                         Console.WriteLine("Enter Valid Inpute");
                         break;
                 }
-
-            }
-
-            
-
+            }           
         }
     }
 }
