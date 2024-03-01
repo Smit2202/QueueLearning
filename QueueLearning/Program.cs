@@ -10,37 +10,37 @@ namespace QueueLearning
         {
             // create a queue
             Queue<string> fruits = new Queue<string>();
-            bool Task = false;
+            bool task = false;
 
-            while (!Task)
+            while (!task)
             {
-                Console.WriteLine($"{Environment.NewLine}Add = A, {Environment.NewLine}Displaying the Queue = B,{Environment.NewLine}Check = F, {Environment.NewLine}Quit = E");
+                Console.WriteLine($"{Environment.NewLine}Add = add, {Environment.NewLine}Displaying the Queue = show,{Environment.NewLine}Check = check, {Environment.NewLine}Quit = quit");
                 Console.WriteLine();
 
                 Console.Write("Enter What You Want to do? : ");
-                string Uinput = Console.ReadLine();
-                switch (Uinput)
+                string UserInputModule = Console.ReadLine();
+                switch (UserInputModule)
                 {
-                    case "A":
+                    case "add":
                         // adds
                         Console.Write("Enter the string: ");
-                        string Uin = Console.ReadLine();
-                        QueueAdd.Add(Uin, fruits);
+                        string userInputString = Console.ReadLine();
+                        QueueAdd.Add(userInputString, fruits);
                         break;
-                    case "B":
+                    case "show":
                         // print elements of the queue 
                         foreach (string item in fruits)
                         {
                             Console.WriteLine(item);
                         }
-                        break;
-                    case "E":
-                        Task = true;
-                        break;
-                    case "F":
+                        break;                    
+                    case "check":
                         Console.WriteLine("Enter String");
                         string nstring = Console.ReadLine(); 
                         Console.WriteLine(fruits.Contains(nstring));
+                        break;
+                    case "quit":
+                        task = true;
                         break;
                     default:
                         Console.WriteLine("Enter Valid Inpute");
