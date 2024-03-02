@@ -8,7 +8,7 @@ namespace QueueLearning
 {
     public class ReturnElement
     {
-        public static void ReturnElementFromQueue(Queue<string> queueName)
+        public void ReturnElementFromQueue(Queue<string> queueName)
         {
             // Return value without removing from the Queue. 
             var peekElement = queueName.Peek();

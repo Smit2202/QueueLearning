@@ -8,7 +8,7 @@ namespace QueueLearning
 {
     public class QueueShow
     {
-        public static void Show(Queue<string> queueName)
+        public void Show(Queue<string> queueName)
         {
             // Print all elements of the Queue.
             foreach (string item in queueName)

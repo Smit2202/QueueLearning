@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueLearning", "QueueLearning\QueueLearning.csproj", "{A1449A0C-1889-4DA1-B105-2FF9B66D569A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryLearning", "..\..\DictionaryLearning\DictionaryLearning\DictionaryLearning.csproj", "{C05707B2-2EEE-4B51-9B87-D4AF36C0E1E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A1449A0C-1889-4DA1-B105-2FF9B66D569A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1449A0C-1889-4DA1-B105-2FF9B66D569A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1449A0C-1889-4DA1-B105-2FF9B66D569A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05707B2-2EEE-4B51-9B87-D4AF36C0E1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05707B2-2EEE-4B51-9B87-D4AF36C0E1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05707B2-2EEE-4B51-9B87-D4AF36C0E1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05707B2-2EEE-4B51-9B87-D4AF36C0E1E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

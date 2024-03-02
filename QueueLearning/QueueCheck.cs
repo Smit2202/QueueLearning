@@ -8,7 +8,7 @@ namespace QueueLearning
 {
     public class QueueCheck
     {
-        public static void Check(Queue<string> queueName)
+        public void Check(Queue<string> queueName)
         {
             // Take Inpute string from user.
             Console.WriteLine("Enter String");

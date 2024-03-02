@@ -8,7 +8,7 @@ namespace QueueLearning
 {
     public class RemoveElement
     {
-        public static void Remove(Queue<string> queueName)
+        public void Remove(Queue<string> queueName)
         {
             // Return value and remove from the Queue. 
             var removedElement = queueName.Dequeue();

@@ -15,28 +15,35 @@ namespace QueueLearning
             bool quit = false;
             while (!quit)
             {
+                UserInput userInputobj = new UserInput();
                 // Taking inpute from user for which task Perform.
-                string UserInputModule = UserInput.Input();
+                string UserInputModule = userInputobj.Input();
 
                 switch (UserInputModule)
                 {
                     // Add Element in Queue.
-                    case "add":                        
-                        QueueAdd.Add(fruitsQueue);
+                    case "add":
+                        //QueueAdd.Add(fruitsQueue);
+                        QueueAdd queueAddobj = new QueueAdd();
+                        queueAddobj.Add(fruitsQueue);
                         break;
                     // Show Queue.
-                    case "show":                        
-                        QueueShow.Show(fruitsQueue);
+                    case "show":
+                        QueueShow queueShowobj = new QueueShow();
+                        queueShowobj.Show(fruitsQueue);
                         break;
                     // Check the Element is in Queue or not .
                     case "check":
-                        QueueCheck.Check(fruitsQueue);
+                        QueueCheck queueCheckobj = new QueueCheck();
+                        queueCheckobj.Check(fruitsQueue);
                         break;
                     case "remove":
-                        RemoveElement.Remove(fruitsQueue);
+                        RemoveElement removeElementobj = new RemoveElement();
+                        removeElementobj.Remove(fruitsQueue);
                         break;
                     case "return":
-                        ReturnElement.ReturnElementFromQueue(fruitsQueue);
+                        ReturnElement returnElementobj = new ReturnElement();
+                        returnElementobj.ReturnElementFromQueue(fruitsQueue);
                         break;
                     // Quit the Application.
                     case "quit":
