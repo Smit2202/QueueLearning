@@ -10,9 +10,12 @@ namespace QueueLearning
     {
         public void ReturnElementFromQueue(Queue<string> queueName)
         {
-            // Return value without removing from the Queue. 
-            var peekElement = queueName.Peek();
-            Console.WriteLine($"Peek element {peekElement} from {queueName}.");
+            if (QueueNull.CheckNull(queueName))
+            {
+                // Return value without removing from the Queue. 
+                var peekElement = queueName.Peek();
+                Console.WriteLine($"Peek element {peekElement} from {queueName}.");
+            }
         }
     }
 }

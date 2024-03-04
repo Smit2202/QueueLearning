@@ -10,10 +10,13 @@ namespace QueueLearning
     {
         public void Show(Queue<string> queueName)
         {
-            // Print all elements of the Queue.
-            foreach (string item in queueName)
+            if(QueueNull.CheckNull(queueName)) // Check that Queue Is Empty or not ?
             {
-                Console.WriteLine(item);
+                // Print all elements of the Queue.
+                foreach (string item in queueName)
+                {
+                    Console.WriteLine(item);
+                }
             }
         }
     }

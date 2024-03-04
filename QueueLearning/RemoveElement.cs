@@ -10,9 +10,12 @@ namespace QueueLearning
     {
         public void Remove(Queue<string> queueName)
         {
-            // Return value and remove from the Queue. 
-            var removedElement = queueName.Dequeue();
-            Console.WriteLine($"Remove element {removedElement} from {queueName}.");
+            if(QueueNull.CheckNull(queueName))
+            {
+                // Return value and remove from the Queue. 
+                var removedElement = queueName.Dequeue();
+                Console.WriteLine($"Remove element {removedElement} from {queueName}.");
+            }
         }
     }
 }

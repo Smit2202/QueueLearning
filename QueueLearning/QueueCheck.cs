@@ -10,19 +10,36 @@ namespace QueueLearning
     {
         public void Check(Queue<string> queueName)
         {
-            // Take Inpute string from user.
-            Console.WriteLine("Enter String");
-            string nstring = Console.ReadLine();
+            //QueueNull.CheckNull(queueName);
 
-            // Return the value 
-            // If Contain => True 
-            if (queueName.Contains(nstring))
+            if (QueueNull.CheckNull(queueName))
             {
-                Console.WriteLine($"The String {nstring} is in Queue.");
-            }
-            else
-            {
-                Console.WriteLine($"Queue don't Conatin {nstring}.");
+                bool check = false;
+
+                while (!check)
+                {
+                    // Take Inpute string from user.
+                    Console.Write("Enter String: ");
+                    string? nstring = Console.ReadLine();
+
+                    if (string.IsNullOrEmpty(nstring) || string.IsNullOrWhiteSpace(nstring))
+                    {
+                        Console.WriteLine("You Enter Nothing Please Enter. ");
+                        Console.WriteLine("");
+                    }
+                    else if (queueName.Contains(nstring))
+                    {
+                        Console.WriteLine($"The String {nstring} is in Queue.");
+                        Console.WriteLine("");
+                        check = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Queue don't Conatin {nstring}.");
+                        Console.WriteLine("");
+                        check = true;
+                    }
+                }
             }
         }
     } 
